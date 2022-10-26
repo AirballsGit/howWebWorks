@@ -1,0 +1,8 @@
+Section 1: Intro to the web: 
+
+Goals: 
+-High level: What happens when you visit URL in browser
+-Explain what IP and DNS are
+-Decribe the differnt parts of a URL 
+-Describe the request/response cycle 
+-Compare GET vs POST requests 

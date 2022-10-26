@@ -53,3 +53,76 @@ In addition to their IP addess on the network, all computers
 can reach themselves at this address. 
 
 The name localhost always maps to 127.0.0.1 
+
+
+
+Section 5: URLS: 
+Univeral Resource Locators 
+
+example: http://site.com/some/page.html>x=1
+
+protocol:   Hostname:   Port:   Resource:           Query: 
+http        site.com    80      /some/page.html     ?x=1
+
+"protocols" are the conventions and ways of one thing talking to another.
+examples of some protocols: 
+                            http    
+                                -Hypertext Transfer Protcol (standard web) >
+                                 (How broswers and servers communicate)
+                            https
+                                -HTTP Secure > 
+                                (How broswers and servers communicate with encryption)
+                            
+                            ftp
+                            -file transfer protocol
+                            (an older protocol for sending files over internet)
+
+                            *Many others, but these are the common ones. 
+
+Hostname: google.com, reddit.com, wikipedia.org etc etc 
+
+Port: 
+-every server has 65,535 unique "ports" you can talk to 
+-think of them as doorways into a castle that let you get into it- 
+-usually dont have to specify a port, atleast in broswer > 
+Services tent to have a default port 
+    for http, is port 80 
+    for https, is port 443
+    -you dont have to specify in URL unless you want a differnt port >>
+
+resourceList of ports: https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers 
+
+
+Resource: 
+-This always talks to some "web server" program on the server 
+    -for some servers, may just have them read and actual file on disk: 
+        /some/page.html 
+    -for many servers, "dynamically generates" a page 
+
+Query: also known as Query String:
+
+-this provides "extra information" - seach terms, info from forms, etc 
+    - The server is provided this info, might use to change page 
+    - Sometimes, Javascript will use this information in addition/instead 
+multiple arguments are sperarated by &: ?x=1&y=2 
+-argument can be given several times: >x=1&x=2 
+
+example: https://developer.mozilla.org/en-US/search?q=css+rainbow (what comes back if i search     
+                                                                    "css rainbow" in form on homepage)
+
+
+Wrap Up: 
+
+http://site.com/some/page.html?x=1 
+
+1. Turn "site.com" into 123.45.67.89
+2. Connect to 123.45.67.89
+3. On Port 80 (the default)
+4. Using the HTTP protocol 
+5. Ask for /some/page.html (ask for this specific resource)
+6. Pass along query string: x = 1 
+
+
+Section 6: HTTP Intro: 
+
+

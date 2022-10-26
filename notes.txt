@@ -6,3 +6,50 @@ Goals:
 -Decribe the differnt parts of a URL 
 -Describe the request/response cycle 
 -Compare GET vs POST requests 
+
+
+What Happens When...
+When I type http://site.com/some/page/html into a browser, what really happens?
+
+This is a common interview question for software engineers. 
+
+Section 2: Networks, Internet, World Wide Web: 
+
+-Networks: A network is a set of computers that can intercommunicate. 
+-Internet: The Internet is just a really, really big network.
+            The Internet is made up of smaller, "local" networks
+-World Wide Web: an information system enababling documents to be 
+            accessed over the internet. Documents and downloadable 
+            media are made available to the network through web servers 
+            and can be accessed by programs such as web browsers. 
+            Servers and resources on the World Wide Web are 
+            identified and located through character strings 
+            called uniform resource locators (URLs).
+            **NOT TO BE CONFUSED WITH THE Internet! 
+
+
+Section 3: IP Addresses: 
+"internet protocall" 
+
+-On Networks, computers have an "IP Address" -
+a unique address to find that computer on the network. 
+
+Routers: machines connected to routers that connect to networks 
+
+
+Section 4: DNS: 
+"domain name system"
+kind of like the phonebook for the web 
+
+Hostnames: 
+we often talk to servers by "hostname" - aka google.com 
+site.com or computer-a.site.come. 
+
+Thats just a nickname for the server, though -
+and the same server can have many hostnames. 
+
+local host = 127.0.0.1 = is special - it's "this computer that you're on".
+In addition to their IP addess on the network, all computers
+can reach themselves at this address. 
+
+The name localhost always maps to 127.0.0.1 

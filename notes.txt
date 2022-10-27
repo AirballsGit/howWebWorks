@@ -125,4 +125,8 @@ http://site.com/some/page.html?x=1
 
 Section 6: HTTP Intro: 
 
+*when were talking about servers in web devel: we are referring to "web servers"
+
+** restart from begining, left off at 6:56 'whats in a request' 
+
 

@@ -125,8 +125,126 @@ http://site.com/some/page.html?x=1
 
 Section 6: HTTP Intro: 
 
+just a set of rules on how you comminute between a broswer and a web server 
+
 *when were talking about servers in web devel: we are referring to "web servers"
 
-** restart from begining, left off at 6:56 'whats in a request' 
+When we request a webpage, say wikipedia: a request is sent to wikipedias server 
+
+          1                        Request:
+                        Web Broswer --------------> Server 
+
+                                //GET // HTTP/1.1 //
+                            *request >>>> *Headers* >>>>> Server* 
+
+          2                         Internal Work:
+                       Web Broswer  server<--->DB Server
+
+          3                          Response: 
+                                             *Headers*
+                        Web Broswer <------<html>...<html>----------->Server
+
+Headers: did your request works, language of content sent back etc 
+
+                
+Whats in a Request? 
+
+-Method(ex.GET)
+-HTTP protocol version (almost always 1.1)
+-Resource URL you want 
+-Headers 
+    -Hostname you're asking about 
+    -Date your browser thinks it is
+    -Language your broswer wants information in
+    -Any cookies that server has sent 
+    -And more! 
+
+in console > under network tab > top choice > headers > you'll see your response/request
+     headers. Under > Response you'll see what html is being sent back to you 
+
+
+Response Codes: 
+
+resources: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
+           https://en.wikipedia.org/wiki/List_of_HTTP_status_codes 
+
+note: theres more but these are the important ones
+
+200: ok : server telling us 'everythings good, heres the content you wanted'
+
+300s: Redirects
+    - What you requested elsewhere: nothings changed you already have this page cached 
+    -304: youve already asked for this page, nothing modifed since last viewed, you have it cached 
+
+400s: Client error responses 
+404: Not Found: Did not find page youre looking for 
+
+500: Server had an internal problem 
+
+
+in wrapping: "remember the cycle of the request and getting a response, theres headers on 
+both sides in the request/response: 
+
+
+Section 7: Viewing Request Responses: 
+
+HTTP rest Methods: - GET
+                   - POST
+                   - Put 
+                   - CUSTOM
+                   -DELETE 
+
+
+
+
+Section 8: Setting Up A Server:
+
+Serving over HTTP >
+    Just opening an HTML file in browser uses file protocol, not http.
+    Some things dont work the same (esp security-related stuff)
+    Its often useful to start a simple HTTP server for testing 
+
+ if when opening an index.html local file, if i remove the /index.html >
+    it will show me all the files within that local folder on the 'file protocol'
+
+You can start a simple, local HTTP server with Python: 
+ 1. run in terminal:   python 3 -m http.server 
+ 2. localhost:8000  (or whatever the port is)
+ 3. http://localhost:8000/notes.txt   (this is an example of opening this file)
+
+ -- if you do http://localhost:8000/kjgewfkjgwe youll get a 404 
+
+ ctrl c should kill the server 
+
+
+ Section 9: Multiple Requests: 
+
+Come back to this section... ***
+
+
+Section 10: Methods GET & POST:
+
+-GET: requests without side effects (ie, dont change server data)
+    -simply trying to get information, search results, >>
+        getting a homepage, dad joke, etc.. We're not saving data or changing >>
+        data a server.
+    - Typically, argument are passed along in a query string: >
+        reddit.com/r/soccer/search/?q=cat
+                                    (^)
+    - Entering URL in broswer, clicking links, and some form submissions 
+
+
+
+-POST: requests with side effects (ie, change data on server)
+    -Typically, arguments sent as body of the request(not in query string)
+    -Some form submissions(but never entering URL in browser or links)
+    -Always do this if theres a side-effect: sending mail, charge credit card etc 
+    -"Are you sure you want to resubmit?"
+
+
+
+
+
+
 
 
